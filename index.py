@@ -14,7 +14,7 @@ btc_to_usd = '<h1><center><p style = "font-family:georgia,garamond,serif;font-si
 
 def avg_ten_minutes_price():
     global total, counter
-    while time.time() < start_time + 2:
+    while time.time() < start_time + 10*60:
         counter = counter + 1
         total = total + float(current_price.replace(",", ""))
 
