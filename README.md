@@ -90,3 +90,17 @@ The third environment is to save docker image informations.
     dockerImage = ''
    }
    ```
+Docker build command:
+
+```buildoutcfg
+docker.build registry + ":$BUILD_NUMBER"
+```
+Deploying the docker image to dockerhub:
+```buildoutcfg
+docker.withRegistry( '', registryCredential ) {
+dockerImage.push()
+```
+After build and deploy, delete the image to cleanup your server space.
+```buildoutcfg
+sh "docker rmi $registry:$BUILD_NUMBER"
+```
