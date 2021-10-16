@@ -7,9 +7,9 @@ The application is a simple, “Present BTC in USD” app that uses Flask, a sma
 
 ## index.py
 In this module we:
-* Present the Current Bitcoin Price in USD
-* Present the Average Price for the last 10 minutes
-
+* Present the Current Bitcoin Price in USD.
+* Present the Average Price for the last 10 minutes. <br>
+We get the data from <a href="https://www.coindesk.com/price/bitcoin/">This Website</a>
 
 ## Dockerfile
 ```buildoutcfg
